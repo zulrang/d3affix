@@ -9,6 +9,7 @@
 		'Chest'  : ['life', 'sock', 'erud'],
 		'Gloves' : ['chc', 'chd', 'aoe', 'as', 'loh', 'cdr', 'rcr'],
 		'Helm'   : ['chc', 'life', 'loh', 'spend', 'sock', 'apoc'],
+		'Spirit Stone'   : ['chc', 'life', 'loh', 'spend', 'sock', 'apoc', 'lpss', 'sgen'],
 		'Pants'  : ['gen', 'sock'],
 		'Ring'   : ['dmg', 'chc', 'chd', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock'],
 		'Shoulder':['aoe', 'life', 'cdr', 'rcr', 'spend'],
@@ -29,6 +30,7 @@
 		'Chest'  : ['rrdmg', 'rmdmg', 'pick', 'knock', 'dura', 'lvlr'],
 		'Gloves' : ['pick', 'stun', 'dura'],
 		'Helm'   : ['rdcie', 'pick', 'lvlr', 'fear', 'dura', 'maxs'],
+		'Spirit Stone'   : ['rdcie', 'pick', 'lvlr', 'fear', 'dura', 'maxs'],
 		'Pants'  : ['lvlr', 'dura'],
 		'Ring'   : ['rdcie'],
 		'Shoulder':['pick', 'lvlr', 'chill', 'dura'],
@@ -63,8 +65,10 @@
 		'bleed':'% Chance to Inflict Bleed for X Weapon Damage over Y Seconds',
 		'hgen': 'Increases Hatred Regeneration by X per second',
 		'mgen': 'Increases Mana Regeneration by X per second',
+		'sgen': 'Increases Spirit Regeneration by X per second',
 		'pdmg': '% Damage',
-		'lpfs': 'Life per Fury Spent'
+		'lpfs': 'Life per Fury Spent',
+		'lpss': 'Life per Spirit Spent'
 	};
 
 	var secondaryAffixLabels = {
