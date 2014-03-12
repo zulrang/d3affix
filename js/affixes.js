@@ -2,7 +2,7 @@
 	
 	var affixToSlot = {}; // created via function
 	var slotToAffix = {
-		'Amulet' : ['dmg', 'chc', 'chd', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock'],
+		'Amulet' : ['ele', 'dmg', 'chc', 'chd', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock'],
 		'Belt'   : ['life', 'gen', 'lpfs'],
 		'Boots'  : ['spend', 'move'],
 		'Bracers': ['chc', 'ele', 'loh'],
@@ -13,9 +13,9 @@
 		'Ring'   : ['dmg', 'chc', 'chd', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock'],
 		'Shoulder':['aoe', 'life', 'cdr', 'rcr', 'spend'],
 		'Shield' : ['chc', 'life', 'sock', 'edmg', 'erud', 'block', 'bleed'],
-		'Source' : ['chc', 'life', 'sock', 'edmg', 'apoc', 'block', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
-		'Quiver' : ['chc', 'life', 'sock', 'edmg', 'block', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'hgen'],
-		'Mojo'   : ['chc', 'life', 'sock', 'edmg', 'mgen', 'block', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
+		'Source' : ['chc', 'life', 'sock', 'edmg', 'apoc', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
+		'Quiver' : ['chc', 'life', 'sock', 'edmg', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'hgen'],
+		'Mojo'   : ['chc', 'life', 'sock', 'edmg', 'mgen', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
 		'1-Hander':['dmg', 'chc', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg'],
 		'2-Hander':['dmg', 'chc', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg']
 	};
