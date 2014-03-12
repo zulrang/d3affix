@@ -105,6 +105,7 @@
 	var $affixList = null;
 	var $secList = null;
 	var $slotList = null;
+	var locked = false;
 
 	//
 	// List display functions
@@ -219,50 +220,70 @@
 	// 
 	
 	function onAffixMouseleave() {
+		if(locked) return;
 		$('.affix-list > a').removeClass('active');
 		removeSlotHighlights();
 	}
 
 	function onAffixMouseenter() {
+		if(locked) return;
 		$(this).addClass('active');
 		highlightSlotsFor($(this).attr('data-affix'));
 	}
 
 	function onSecMouseleave() {
+		if(locked) return;
 		$('.sec-list > a').removeClass('active');
 		removeSlotHighlights();
 	}
 
 	function onSecMouseenter() {
+		if(locked) return;
 		$(this).addClass('active');
 		highlightSlotsForSec($(this).attr('data-sec'));
 	}
 
 	function onSlotMouseleave() {
+		if(locked) return;
 		$('.slot-list > a').removeClass('active');
 		removeAffixHighlights();
 		removeSecHighlights();
 	}
 
 	function onSlotMouseenter() {
+		if(locked) return;
 		$(this).addClass('active');
 		highlightAffixesFor($(this).attr('data-slot'));
 		highlightSecsFor($(this).attr('data-slot'));
 	}
 
-	function onDeadLink(event) {
+	function lockSelection(event) {
+		if(locked == this) {
+			locked = false;
+			$(this).mouseleave();
+		} else {
+			var last = locked;
+			locked = false;
+			$(last).mouseleave();
+			$(this).mouseenter();
+			locked = this;
+		}
+		console.log("locked = " + locked);
+		// do not activate anchor
 		event.preventDefault ? event.preventDefault() : event.returnValue = false;
 		return false;
 	}
 
-
 	function addEvents() {
-		$('.slot-list > a').on('mouseenter', onSlotMouseenter).on('click', onDeadLink);
-		$('.slot-list > a').on('mouseleave', onSlotMouseleave).on('click', onDeadLink);
-		$('.affix-list > a').on('mouseenter', onAffixMouseenter).on('click', onDeadLink);
-		$('.affix-list > a').on('mouseleave', onAffixMouseleave).on('click', onDeadLink);
-		$('.sec-list > a').on('mouseenter', onSecMouseenter).on('click', onDeadLink);
-		$('.sec-list > a').on('mouseleave', onSecMouseleave).on('click', onDeadLink);
+		$('.slot-list > a').on('mouseenter', onSlotMouseenter)
+			.on('click', lockSelection)
+			.on('mouseleave', onSlotMouseleave);
+		$('.affix-list > a').on('mouseenter', onAffixMouseenter)
+			.on('click', lockSelection)
+			.on('mouseleave', onAffixMouseleave);
+		$('.sec-list > a').on('mouseenter', onSecMouseenter)
+			.on('click', lockSelection)
+			.on('mouseleave', onSecMouseleave);
 	}
 	function onLoad() {
 		$slotList = $('.slot-list');
