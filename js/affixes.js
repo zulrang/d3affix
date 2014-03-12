@@ -69,6 +69,7 @@
 		'mgen': 'Increases Mana Regeneration by X per second',
 		'sgen': 'Increases Spirit Regeneration by X per second',
 		'pdmg': '% Damage',
+		'arm' : 'Armor',
 		'lpfs': 'Life per Fury Spent',
 		'lpss': 'Life per Spirit Spent',
 		'pri' : 'Primary Attribute (Str, Dex, or Int)',
