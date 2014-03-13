@@ -19,8 +19,8 @@
 		'Source' 		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'apoc', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
 		'Quiver' 		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'hgen'],
 		'Mojo'   		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'mgen', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
-		'1-Hander'		: ['pri', 'vit', 'ar', 'lps', 'dmg', 'chc', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg'],
-		'2-Hander'		: ['pri', 'vit', 'ar', 'lps', 'dmg', 'chc', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg']
+		'1-Hander'		: ['pri', 'vit', 'ar', 'lps', 'dmg', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg', 'sgen'],
+		'2-Hander'		: ['pri', 'vit', 'ar', 'lps', 'dmg', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg']
 	};
 
 	var secToSlot = {};
