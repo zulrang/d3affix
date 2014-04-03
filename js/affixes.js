@@ -3,24 +3,25 @@
 	var affixToSlot = {}; // created via function
 	var slotToAffix = {
 		'Amulet' 		: ['pri', 'vit', 'ar', 'lps', 'arm', 'ele', 'dmg', 'chc', 'chd', 'aoe', 'as', 'life', 'cdr', 'rcr', 'sock'],
-		'Belt'   		: ['pri', 'vit', 'lps', 'arm', 'life', 'gen'],
-		'Mighty Belt'	: ['pri', 'vit', 'lps', 'arm', 'life', 'gen', 'lpfs'],
+		'Belt'   		: ['pri', 'vit', 'lps', 'ar', 'arm', 'life', 'gen'],
+		'Mighty Belt'	: ['pri', 'vit', 'ar', 'lps', 'arm', 'life', 'gen', 'lpfs'],
 		'Boots'  		: ['pri', 'vit', 'ar', 'lps', 'arm', 'move', 'spend'],
 		'Bracers'		: ['ele', 'pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'loh'],
 		'Chest'  		: ['pri', 'vit', 'ar', 'lps', 'arm', 'life', 'sock', 'spend'],
 		'Cloak'  		: ['pri', 'vit', 'ar', 'lps', 'arm', 'life', 'sock', 'hgen', 'spend'],
 		'Gloves' 		: ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'chd', 'aoe', 'as', 'loh', 'cdr', 'rcr'],
-		'Helm'   		: ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'life', 'loh', 'spend', 'sock', 'apoc'],
-		'Spirit Stone'  : ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'life', 'loh', 'spend', 'sock', 'apoc', 'lpss', 'sgen'],
+		'Helm'   		: ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'life', 'loh', 'spend', 'sock'],
+		'Wizard Hat'    : ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'life', 'loh', 'spend', 'sock', 'apoc'],
+		'Spirit Stone'  : ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'life', 'loh', 'spend', 'sock', 'lpss', 'sgen'],
 		'Pants'  		: ['pri', 'vit', 'ar', 'lps', 'arm', 'gen', 'sock'],
-		'Ring'   		: ['pri', 'vit', 'ar', 'lps', 'arm', 'dmg', 'chc', 'chd', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock'],
+		'Ring'   		: ['pri', 'vit', 'ar', 'lps', 'arm', 'dmg', 'chc', 'chd', 'as', 'life', 'loh', 'aoe', 'cdr', 'rcr', 'sock'],
 		'Shoulder'		: ['pri', 'vit', 'ar', 'lps', 'arm', 'aoe', 'life', 'cdr', 'rcr', 'spend'],
 		'Shield' 		: ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'life', 'sock', 'edmg', 'erud', 'block', 'bleed'],
 		'Source' 		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'apoc', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
 		'Quiver' 		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'as', 'aoe', 'chc', 'hgen'],
 		'Mojo'   		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'mgen', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
-		'1-Hander'		: ['pri', 'vit', 'ar', 'lps', 'dmg', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg', 'sgen'],
-		'2-Hander'		: ['pri', 'vit', 'ar', 'lps', 'dmg', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg']
+		'1-Hander'		: ['pri', 'vit', 'lps', 'dmg', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg', 'sgen'],
+		'2-Hander'		: ['pri', 'vit', 'lps', 'dmg', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg']
 	};
 
 	var secToSlot = {};
@@ -28,22 +29,23 @@
 		'Amulet' 		: ['res', 'xp', 'glob', 'lpk', 'rdcie', 'rrdmg', 'rmdmg', 'gold', 'thorn', 'blind'],
 		'Belt'   		: ['res', 'lpk', 'thorn', 'xp', 'pick', 'freez', 'dura', 'lvlr'],
 		'Mighty Belt'	: ['res', 'xp', 'thorn', 'lpk', 'pick', 'lvlr', 'freez', 'dura'],
-		'Boots'  		: ['gold', 'thorn', 'xp', 'glob', 'immo', 'dura', 'pick', 'lvlr'],
-		'Bracers'		: ['rrdmg', 'rmdmg', 'gold', 'thorn', 'xp', 'pick', 'knock', 'dura', 'lvlr'],
-		'Chest'  		: ['rrdmg', 'rmdmg', 'lpk', 'gold', 'thorn', 'xp', 'pick', 'dura', 'glob', 'lvlr'],
+		'Boots'  		: ['res', 'gold', 'thorn', 'xp', 'glob', 'immo', 'dura', 'pick', 'lvlr'],
+		'Bracers'		: ['res', 'rrdmg', 'rmdmg', 'gold', 'thorn', 'xp', 'pick', 'knock', 'dura', 'lvlr'],
+		'Chest'  		: ['res', 'rrdmg', 'rmdmg', 'lpk', 'gold', 'thorn', 'xp', 'pick', 'dura', 'glob', 'lvlr'],
 		'Cloak'  		: ['res', 'rrdmg', 'rmdmg', 'lpk', 'gold', 'thorn', 'xp', 'pick', 'dura', 'glob', 'lvlr', 'maxd'],
 		'Gloves' 		: ['res', 'gold', 'thorn', 'xp', 'lvlr', 'pick', 'stun', 'dura'],
-		'Helm'   		: ['res', 'xp', 'glob', 'lpk', 'rdcie', 'pick', 'lvlr', 'fear', 'dura', 'maxs'],
-		'Spirit Stone'  : ['res', 'xp', 'glob', 'lpk', 'rdcie', 'pick', 'lvlr', 'fear', 'dura', 'maxs'],
-		'Pants'  		: ['res', 'xp', 'glob', 'lpk', 'lvlr', 'dura'],
-		'Ring'   		: ['res', 'xp', 'glob', 'lpk', 'rdcie'],
+		'Helm'   		: ['res', 'gold', 'thorn', 'xp', 'pick', 'rdcie', 'fear', 'dura', 'lvlr'],
+		'Wizard Hat'    : ['res', 'gold', 'thorn', 'xp', 'pick', 'rdcie', 'fear', 'dura', 'lvlr', 'maxap'],
+		'Spirit Stone'  : ['res', 'gold', 'thorn', 'xp', 'pick', 'rdcie', 'fear', 'dura', 'lvlr', 'maxs'],
+		'Pants'  		: ['res', 'lpk', 'gold', 'thorn', 'xp', 'pick', 'show', 'dura', 'lvlr'],
+		'Ring'   		: ['res', 'lpk', 'gold', 'thorn', 'xp', 'rdcie', 'glob'],
 		'Shoulder'		: ['res', 'xp', 'glob', 'lpk', 'pick', 'lvlr', 'chill', 'dura'],
 		'Shield' 		: ['res', 'xp', 'glob', 'lpk', 'rdcie', 'rrdmg', 'rmdmg', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
-		'Source' 		: ['res', 'xp', 'glob', 'lpk', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxap'],
+		'Source' 		: ['xp', 'glob', 'lpk', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxap'],
 		'Quiver' 		: ['xp', 'glob', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxd', 'gold', 'thorn', 'lvlr', 'freez'],
-		'Mojo'   		: ['res', 'xp', 'glob', 'lpk', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxm'],
-		'1-Hander'		: ['res', 'xp', 'glob', 'lpk', 'lvlr', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxap', 'maxf'],
-		'2-Hander'		: ['res', 'xp', 'glob', 'lpk', 'lvlr', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxf']
+		'Mojo'   		: ['xp', 'glob', 'lpk', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxm'],
+		'1-Hander'		: ['xp', 'glob', 'lpk', 'lvlr', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxap', 'maxf'],
+		'2-Hander'		: ['xp', 'glob', 'lpk', 'lvlr', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxf']
 	};
 
 	var primaryAffixLabels = {
@@ -93,6 +95,7 @@
 		'thorn' : 'Ranged and melee attackers take X damage per hit',
 		'xp'    : 'Monster kills grant +X experience',
 		'pick'  : 'Increases Gold and Health Pickup by X yards',
+		'rdcie' : 'Reduced duration of control impairing effects',
 		'blind' : '% Chance to Blind on hit',
 		'chill' : '% Chance to Chill on hit',
 		'freez' : '% Chance to Freeze on hit',
@@ -104,7 +107,6 @@
 		'dura'  : 'Ignores Durability Loss',
 		'glob'  : 'Health globes and potions grant +X life',
 		'lvlr'  : 'Level Requirement Reduced by X',
-		'rdcie' : 'Reduced duration of control impairing effects',
 	};
 
 	var $affixList = null;
