@@ -2,8 +2,8 @@
 	
 	var affixToSlot = {}; // created via function
 	var slotToAffix = {
-		'Amulet' 		: ['pri', 'vit', 'ar', 'lps', 'arm', 'ele', 'dmg', 'chc', 'chd', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock'],
-		'Belt'   		: ['pri', 'vit', 'ar', 'lps', 'arm', 'life', 'gen', 'lpfs'],
+		'Amulet' 		: ['pri', 'vit', 'ar', 'lps', 'arm', 'ele', 'dmg', 'chc', 'chd', 'aoe', 'as', 'life', 'cdr', 'rcr', 'sock'],
+		'Belt'   		: ['pri', 'vit', 'lps', 'arm', 'life', 'gen'],
 		'Mighty Belt'	: ['pri', 'vit', 'ar', 'lps', 'arm', 'life', 'gen', 'lpfs'],
 		'Boots'  		: ['pri', 'vit', 'ar', 'lps', 'arm', 'spend', 'move'],
 		'Bracers'		: ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'ele', 'loh'],
@@ -17,7 +17,7 @@
 		'Shoulder'		: ['pri', 'vit', 'ar', 'lps', 'arm', 'aoe', 'life', 'cdr', 'rcr', 'spend'],
 		'Shield' 		: ['pri', 'vit', 'ar', 'lps', 'arm', 'chc', 'life', 'sock', 'edmg', 'erud', 'block', 'bleed'],
 		'Source' 		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'apoc', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
-		'Quiver' 		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'hgen'],
+		'Quiver' 		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'as', 'aoe', 'chc', 'hgen'],
 		'Mojo'   		: ['pri', 'vit', 'ar', 'lps', 'chc', 'life', 'sock', 'edmg', 'mgen', 'bleed', 'spend', 'cdr', 'rcr', 'life', 'loh', 'as', 'aoe', 'chc', 'dmg'],
 		'1-Hander'		: ['pri', 'vit', 'ar', 'lps', 'dmg', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg', 'sgen'],
 		'2-Hander'		: ['pri', 'vit', 'ar', 'lps', 'dmg', 'aoe', 'as', 'life', 'loh', 'cdr', 'rcr', 'sock', 'bleed', 'pdmg']
@@ -25,8 +25,8 @@
 
 	var secToSlot = {};
 	var slotToSec = {
-		'Amulet' 		: ['res', 'xp', 'glob', 'lpk', 'rdcie', 'rrdmg', 'rmdmg'],
-		'Belt'   		: ['res', 'xp', 'glob', 'lpk', 'pick', 'lvlr', 'freez', 'dura'],
+		'Amulet' 		: ['res', 'xp', 'glob', 'lpk', 'rdcie', 'rrdmg', 'rmdmg', 'gold', 'thorn', 'blind'],
+		'Belt'   		: ['res', 'lpk', 'thorn', 'xp', 'pick', 'freez', 'dura', 'lvlr'],
 		'Mighty Belt'	: ['res', 'xp', 'glob', 'lpk', 'pick', 'lvlr', 'freez', 'dura'],
 		'Boots'  		: ['res', 'xp', 'glob', 'lpk', 'pick', 'lvlr', 'immo', 'dura'],
 		'Bracers'		: ['res', 'xp', 'glob', 'lpk', 'rrdmg', 'rmdmg', 'pick', 'stun', 'dura'],
@@ -40,7 +40,7 @@
 		'Shoulder'		: ['res', 'xp', 'glob', 'lpk', 'pick', 'lvlr', 'chill', 'dura'],
 		'Shield' 		: ['res', 'xp', 'glob', 'lpk', 'rdcie', 'rrdmg', 'rmdmg', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
 		'Source' 		: ['res', 'xp', 'glob', 'lpk', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxap'],
-		'Quiver' 		: ['res', 'xp', 'glob', 'lpk', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxd'],
+		'Quiver' 		: ['xp', 'glob', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxd', 'gold', 'thorn', 'lvlr', 'freez'],
 		'Mojo'   		: ['res', 'xp', 'glob', 'lpk', 'blind', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxm'],
 		'1-Hander'		: ['res', 'xp', 'glob', 'lpk', 'lvlr', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxap', 'maxf'],
 		'2-Hander'		: ['res', 'xp', 'glob', 'lpk', 'lvlr', 'chill', 'freeze', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxf']
@@ -48,9 +48,13 @@
 
 	var primaryAffixLabels = {
 		'dmg' : 'Damage',
+		'ele' : '[Element] Skills deal % more damage',
+		'pri' : 'Primary Attribute (Str, Dex, or Int)',
+		'vit' : 'Vitality',
+		'arm' : 'Armor',
+		'lps' : 'X Life per Second',
 		'chc' : 'Critical Hit Chance Increased by %',
 		'chd' : 'Critical Hit Damage Increased by %',
-		'ele' : '[Element] Skills deal % more damage',
 		'aoe' : 'Chance to Deal % area damage on Hit',
 		'as'  : 'Attack Speed %',
 		'life': 'Life %',
@@ -62,7 +66,7 @@
 		'move': '% Movement Speed',
 		'ele' : '[Element] Skills deal % more damage',
 		'sock': 'Sockets',
-		'edmg': 'Increased Damage Against Elites',
+		'edmg': 'Increases Damage Against Elites by %',
 		'erud': 'Reduced damage from Elites',
 		'apoc': 'Critical Hits grant X Arcane Power',
 		'block':'% Chance to Block',
@@ -71,21 +75,17 @@
 		'mgen': 'Increases Mana Regeneration by X per second',
 		'sgen': 'Increases Spirit Regeneration by X per second',
 		'pdmg': '% Damage',
-		'arm' : 'Armor',
 		'lpfs': 'Life per Fury Spent',
 		'lpss': 'Life per Spirit Spent',
-		'pri' : 'Primary Attribute (Str, Dex, or Int)',
-		'vit' : 'Vitality',
-		'ar'  : 'X All Resistances',
-		'lps' : 'X Life per Second'
+		'ar'  : 'X All Resistances'
 	};
 
 	var secondaryAffixLabels = {
-		'rdcie' : 'Reduced duration of control impairing effects',
-		'rrdmg' : 'Reduces damage from ranged attacks by %',
-		'rmdmg' : 'Reduces damage from melee attacks by %',
+		'res'   : 'X [Type] Resistance',
+		'lpk'   : 'Life per Kill',
+		'thorn' : 'Ranged and melee attackers take X damage per hit',
+		'xp'    : 'Monster kills grant +X experience',
 		'pick'  : 'Increases Gold and Health Pickup by X yards',
-		'lvlr'  : 'Level Requirement Reduced by X',
 		'blind' : '% Chance to Blind on hit',
 		'chill' : '% Chance to Chill on hit',
 		'freez' : '% Chance to Freeze on hit',
@@ -93,16 +93,18 @@
 		'stun' 	: '% Chance to Stun on hit',
 		'fear' 	: '% Chance to Fear on hit',
 		'knock' : '% Chance to Knockback on hit',
+		'lvlr'  : 'Level Requirement Reduced by X',
 		'dura'  : 'Ignores Durability Loss',
+		'rdcie' : 'Reduced duration of control impairing effects',
+		'rrdmg' : 'Reduces damage from ranged attacks by %',
+		'rmdmg' : 'Reduces damage from melee attacks by %',
+		'gold'  : '% Extra Gold from Monsters',
 		'maxap'  : 'Maximum Arcane Power',
 		'maxd'  : 'Maximum Discipline',
 		'maxm'  : 'Maximum Mana',
 		'maxf'  : 'Maximum Fury',
 		'maxs'  : 'Maximum Spirit',
-		'res'   : 'X [Type] Resistance',
-		'xp'    : 'Monster kills grant +X experience',
 		'glob'  : 'Health globes and potions grant +X life',
-		'lpk'   : 'Life per Kill'
 	};
 
 	var $affixList = null;
