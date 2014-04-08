@@ -60,10 +60,10 @@
 		'Flail (1H)'         : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
 		'Wand'               : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
 		'Mighty Weapon (1H)' : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
-		'Fist Weapon'	     : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
+		'Fist Weapon'	     : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxs'],
 		'Hand Crossbow'	     : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
 		'Two-Hander'	     : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
-		'Daibo'		         : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
+		'Daibo'		         : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura', 'maxs'],
 		'Flail (2H)'         : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
 		'Mighty Weapon (2H)' : ['xp', 'lpk', 'lvlr', 'chill', 'freez', 'blind', 'immo', 'slow', 'stun', 'fear', 'knock', 'dura'],
 	};   
